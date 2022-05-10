@@ -1,25 +1,10 @@
-var http = require('http');
+const http = require('http');
+const customModule = require('./index')
 
-/// Solution of N1
-// http.createServer(function (req, res) {
-//     res.writeHead(200,
-//         { 'Content-Type': 'text/html' });
-   // res.end('Hello World!');
-// }).listen(8080);
+function createServer(request, response) {
+   response.writeHead(200, { 'Content-Type': 'text/Html' });
+   response.write("Hello World" + customModule.myDate());
+   response.end();
+}
 
-// Solution of N2
-// var dt = require('./myModule');
-// http.createServer(function (req, res) {
-//     res.writeHead(200,
-//         { 'Content-Type': 'text/html' });
-//     res.write("The date and time are currently: " + dt.myDate());
-//     res.end();
-// }).listen(8080);
-
-
-//// Solution of N3
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(req.url);
-    res.end();
-    }).listen(8080); 
+http.createServer(createServer).listen(8040);
