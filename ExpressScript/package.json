@@ -2,16 +2,18 @@
   "name": "expressscript",
   "version": "1.0.0",
   "description": "express by ashish",
-  "main": "app.js",
+  "main": "cookies.js",
   "scripts": {
-    "serve": "nodemon app.js",
+    "serve": "nodemon cookies.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ashish pokhrel",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "express": "^4.18.1"
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
